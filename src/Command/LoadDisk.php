@@ -7,7 +7,7 @@ use Anomaly\FilesModule\Disk\Contract\DiskInterface;
 use Aws\S3\S3Client;
 use Illuminate\Contracts\Config\Repository;
 use Illuminate\Filesystem\FilesystemManager;
-use League\Flysystem\AwsS3v3\AwsS3Adapter;
+use League\Flysystem\AwsS3v3\AwsS3V3Adapter;
 use League\Flysystem\MountManager;
 
 /**
@@ -110,7 +110,7 @@ class LoadDisk
 
         $driver = new AdapterFilesystem(
             $this->disk,
-            new AwsS3Adapter(
+            new AwsS3V3Adapter(
                 $client = new S3Client(
                     [
                         'credentials' => [
