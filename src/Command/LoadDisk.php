@@ -67,7 +67,7 @@ class LoadDisk
         $prefix = $configuration->value(
             'anomaly.extension.s3_adapter::prefix',
             $this->disk->getSlug()
-        );
+        ) ?: '';
 
         $cloudFront = $configuration->value(
             'anomaly.extension.s3_adapter::cloud_front',
