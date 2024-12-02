@@ -22,8 +22,8 @@
         "email": "support@pyrocms.com"
     },
     "require": {
-        "league/flysystem-aws-s3-v3": "^1.0",
-        "anomaly/files-module": "^2.4"
+        "league/flysystem-aws-s3-v3": "^3.0",
+        "anomaly/files-module": "^2.7"
     },
     "autoload": {
         "psr-4": {
