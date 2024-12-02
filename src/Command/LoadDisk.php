@@ -7,7 +7,7 @@ use Anomaly\FilesModule\Disk\Contract\DiskInterface;
 use Aws\S3\S3Client;
 use Illuminate\Contracts\Config\Repository;
 use Illuminate\Filesystem\FilesystemManager;
-use League\Flysystem\AwsS3v3\AwsS3V3Adapter;
+use League\Flysystem\AwsS3V3\AwsS3V3Adapter;
 use League\Flysystem\MountManager;
 
 /**
