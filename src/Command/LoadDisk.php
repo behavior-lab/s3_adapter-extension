@@ -84,7 +84,7 @@ class LoadDisk
             $this->disk->getSlug()
         )->getValue();
 
-        $config->set(
+        config()->set(
             'filesystems.disks.' . $this->disk->getSlug(),
             [
                 'driver' => 's3',
@@ -129,9 +129,7 @@ class LoadDisk
             ]
         );
 
-        $manager->mountFilesystem($this->disk->getSlug(), $driver);
-
-        $filesystem->extend(
+        app('filesystem')->extend(
             $this->disk->getSlug(),
             function () use ($driver) {
                 return $driver;
